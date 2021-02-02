@@ -4,8 +4,17 @@ body {
 }
 
 /* General */
+.container {
+  padding: 10px;
+}
+
 .container_1000 {
   max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container_800 {
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -74,6 +83,37 @@ header .jumbotron .banner_text p {
   font-size: 1.4em;
   font-weight: 600;
   margin: 20px;
+}
+
+/* MAIN */
+main section [class^="col-"] {
+  text-align: center;
+}
+
+main section [class^="col-"] img {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
+
+main section:first-child {
+  padding: 50px;
+}
+main section:first-child h2 {
+  font-size: 1.8em;
+}
+main section:first-child p {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+main section:first-child a {
+  text-decoration: none;
+  font-weight: 600;
+}
+main section:first-child a::after {
+  content: '>';
+  margin-left: 5px;
 }
 
 /* HAMBURGER */
