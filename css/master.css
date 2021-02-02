@@ -30,7 +30,7 @@ ul {
 }
 ul.line_list li{
   display: inline;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 ul.line_list li a {
   text-decoration: none;
@@ -41,17 +41,23 @@ ul.line_list li a {
   position: fixed;
   width: 100%;
   height: 80px;
+  background-color: #ffffff;
   line-height: 80px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 999;
 }
 
 .header_top_fixed ul.line_list li a {
   text-transform: uppercase;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 600;
+}
+
+.header_top_fixed ul.line_list:first-of-type {
+  text-align: right;
 }
 
 .header_top_fixed ul.line_list.languages li:not(:last-child)::after {
@@ -86,6 +92,8 @@ header .jumbotron .banner_text p {
 }
 
 /* MAIN */
+
+/* helbizGo */
 main section [class^="col-"] {
   text-align: center;
 }
@@ -99,6 +107,10 @@ main section [class^="col-"] img {
 main section:first-child {
   padding: 50px;
 }
+main section:first-child div {
+  background-color: #FAFAFA;
+  padding: 0 10px;
+}
 main section:first-child h2 {
   font-size: 1.8em;
 }
@@ -111,11 +123,53 @@ main section:first-child a {
   text-decoration: none;
   font-weight: 600;
 }
-main section:first-child a::after {
+main section:first-child a:first-child::after {
   content: '>';
   margin-left: 5px;
 }
+main section:first-child img {
+  margin-top: 20px;
+}
 
+/* smartphone */
+.container-fluid.bg_smartphone {
+  height: 45vh;
+  background-image: url('../img/HelbizBanner.jpg');
+  background-position: center;
+  background-size: cover;
+}
+main section:nth-child(2) div.container_1000 {
+  position: relative;
+  height: 35vh;
+}
+main section:nth-child(2) div.container_1000 img {
+  position: absolute;
+  width: 35vh;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main section:nth-child(2) div.container_1000 .text_container {
+  position: relative;
+}
+main section:nth-child(2) div.container_1000 .text_container .text {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+}
+main section:nth-child(2) div.container_1000 .text_container .text h3,
+main section:nth-child(2) div.container_1000 .text_container .text h5,
+main section:nth-child(2) div.container_1000 .text_container .text span {
+  font-weight: 600;
+}
+main section:nth-child(2) div.container_1000 .text_container .text h3 {
+  font-size: 2.4em;
+}
+main section:nth-child(2) div.container_1000 .text_container .text h5 {
+  font-size: 1.2em;
+}
 /* HAMBURGER */
 @media screen and (max-width: 992px) {
   #header_logo {
@@ -128,6 +182,10 @@ main section:first-child a::after {
     font-size: 2em;
     text-decoration: none;
     margin-right: 30px;
+  }
+
+  .container-fluid.bg_smartphone {
+    background-position: left;
   }
 }
 
@@ -149,5 +207,9 @@ main section:first-child a::after {
   }
   .xs_display_none {
     display: none;
+  }
+
+  main section:first-child div:last-child {
+    margin-top: 50px;
   }
 }
